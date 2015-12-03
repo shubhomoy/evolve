@@ -1,0 +1,26 @@
+Dated : 27th November 2014
+----------------------------------------------------------------------------
+Tables
+
+1. add rating column in post table (float default 0) and no_of_people (int default 0) in post
+2. added bulletin_board table
+3. added rating table
+
+Dated : 3rd December 2014
+----------------------------------------------------------------------------
+Table 
+
+1. Add coloumn is_private (boolean) to post table
+2. Add coloumn is_guest (boolean) to rating DEFAULT false
+3. Add coloumn guest_id (varchar 6) to rating DEFAULT NULL
+4. Add coloumn is_guest (boolean) to comments DEFAULT false
+5. Add column guest_id (varchar 6) to comments DEFAULT NULL
+6. Update image folder
+7. Editor.js update
+
+Dated : 4th December 2014
+-----------------------------------------------------------------------------
+1. removed authentication in search URL
+2. Modified Account Controller
+3. Modified Post Model
+4. Modified login.blade.php
