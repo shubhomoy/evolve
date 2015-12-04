@@ -8,5 +8,9 @@ class Clinic extends Eloquent {
 	public function doctors() {
 		return $this->belongsToMany('Doctor', 'doctor_clinic', 'clinic_id', 'doctor_id');
 	}
+
+	public function facilitites() {
+		return $this->hasMany('ClinicFacility', 'clinic_id');
+	}
 }
 
