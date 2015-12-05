@@ -12,5 +12,9 @@ class Doctor extends Eloquent {
 	public function contacts() {
 		return $this->hasMany('DoctorContacts', 'doctor_id');	
 	}
+
+	public function appointments() {
+		return $this->hasMany('Appointments', 'doctor_id');
+	}
 }
 
