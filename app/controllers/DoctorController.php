@@ -51,8 +51,8 @@ class DoctorController extends BaseController {
 		}
 	}
 
-	public function showAppointments() {
-		$appointments = Appointment::where('verified','=', 1)->get();
+	public function showAppointments($id) {
+		$appointments = Appointment::with('clinic')->where('verified','=', 1)->where('doctor_id', '=', $id)->get();
 		return Response::data($appointments);
 	}
 }
