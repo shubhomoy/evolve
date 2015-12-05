@@ -9,7 +9,7 @@ class Clinic extends Eloquent {
 		return $this->belongsToMany('Doctor', 'doctor_clinic', 'clinic_id', 'doctor_id');
 	}
 
-	public function facilitites() {
+	public function facilities() {
 		return $this->hasMany('ClinicFacility', 'clinic_id');
 	}
 }
