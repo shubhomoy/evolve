@@ -27,4 +27,27 @@ class DoctorController extends BaseController {
 		}
 		return Response::data($result);
 	}
+
+	public function signup() {
+		$name = Input::get('name');
+		$reg_id = Input::get('reg_id');
+		$address = Input::get('address');
+		$email = Input::get('email');
+		$description = Input::get('description');
+
+		$doctor = Doctor::create(['name' => $name, 'reg_id' => $reg_id, 'address' => $address, 'email' => $email, 'description' => $description]);
+
+		return Response::data($doctor);
+	}
+
+	public function login() {
+		$name = Input::get('name');
+		$reg_id = Input::get('reg_id');
+		try{
+			$doctor = Doctor::where('name', '=', $name)->where('reg_id', '=', $reg_id)->firstOrFail();
+			return Response::data($doctor);
+		}catch(ModelNotFoundException $e) {
+			return Response::unauthorized();
+		}
+	}
 }
