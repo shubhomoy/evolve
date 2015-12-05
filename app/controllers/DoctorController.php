@@ -57,6 +57,11 @@ class DoctorController extends BaseController {
 	}
 
 	public function addRemoveClinic($doctor_id, $clinic_id) {
-		
+
+	}
+
+	public function showAllSpecializations() {
+		$s = Specialization::all();
+		return Response::data($s);
 	}
 }

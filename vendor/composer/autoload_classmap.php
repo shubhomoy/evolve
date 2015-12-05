@@ -7,6 +7,8 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AccessToken' => $baseDir . '/app/models/AccessToken.php',
+    'Appointment' => $baseDir . '/app/models/Appointment.php',
+    'AppointmentController' => $baseDir . '/app/controllers/AppointmentController.php',
     'BaseController' => $baseDir . '/app/controllers/BaseController.php',
     'Boris\\Boris' => $vendorDir . '/d11wtq/boris/lib/Boris/Boris.php',
     'Boris\\CLIOptionsHandler' => $vendorDir . '/d11wtq/boris/lib/Boris/CLIOptionsHandler.php',
@@ -41,6 +43,7 @@ return array(
     'CreateDoctorContactNumberTable' => $baseDir . '/app/database/migrations/2015_12_03_181846_create_doctor_contact_number_table.php',
     'CreateDoctorsTable' => $baseDir . '/app/database/migrations/2015_12_03_171207_create_doctors_table.php',
     'CreatePhotosTable' => $baseDir . '/app/database/migrations/2015_12_03_134402_create_photos_table.php',
+    'CreateSpecializationTable' => $baseDir . '/app/database/migrations/2015_12_05_195252_create_specialization_table.php',
     'CreateUsersTable' => $baseDir . '/app/database/migrations/2014_10_12_000000_create_users_table.php',
     'Crypt_AES' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/AES.php',
     'Crypt_Base' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/Base.php',
