@@ -1,6 +1,7 @@
 <?php
 
 return [
-	'public' => 'pinpost.in',
-	'dev' => 'evolve.dev'
+	'public' => 'evolve.in',
+	'dev' => 'evolve.dev',
+	'mobile' => '10.0.2.2'
 ];
