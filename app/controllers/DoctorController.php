@@ -55,4 +55,8 @@ class DoctorController extends BaseController {
 		$appointments = Appointment::with('clinic')->where('verified','=', 1)->where('doctor_id', '=', $id)->get();
 		return Response::data($appointments);
 	}
+
+	public function addRemoveClinic($doctor_id, $clinic_id) {
+		
+	}
 }

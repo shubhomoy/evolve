@@ -11,4 +11,9 @@ class ClinicController extends BaseController {
 			return Response::invalid();
 		}
 	}
+
+	public function index() {
+		$clinics = Clinic::all();
+		return Response::data($clinics);
+	}
 }
