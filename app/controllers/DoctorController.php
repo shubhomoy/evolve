@@ -50,4 +50,9 @@ class DoctorController extends BaseController {
 			return Response::unauthorized();
 		}
 	}
+
+	public function showAppointments() {
+		$appointments = Appointment::where('verified','=', 1)->get();
+		return Response::data($appointments);
+	}
 }

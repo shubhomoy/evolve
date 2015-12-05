@@ -14,6 +14,7 @@
 Route::get('/api/search/doctors', 'DoctorController@search');
 
 Route::get('/api/doctor/{id}', 'DoctorController@show');
+Route::get('/api/doctor/{id}/appointments', 'DoctorController@showAppointments');
 Route::post('/auth/doctor/signup', 'DoctorController@signup');
 Route::post('/auth/doctor/login', 'DoctorController@login');
 
@@ -21,9 +22,3 @@ Route::get('/api/clinic/{id}', 'ClinicController@show');
 
 Route::post('/api/appointment', 'AppointmentController@makeAppointment');
 Route::post('/api/appointment/verify', 'AppointmentController@verifyAppointment');
-
-// WEB 
-
-Route::get('/', function() {
-	return View::make('doctor.signup');
-});
