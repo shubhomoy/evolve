@@ -17,6 +17,7 @@ Route::get('/api/specializations', 'DoctorController@showAllSpecializations');
 Route::get('/api/doctor/{id}', 'DoctorController@show');
 Route::get('/api/doctor/{id}/appointments', 'DoctorController@showAppointments');
 Route::get('/api/doctor/{doctor_id}/clinic/{clinic_id}', 'DoctorController@addRemoveClinic');
+Route::get('/api/doctor/{doctor_id}/specialization/{spec_id}', 'DoctorController@addRemoveSpecialization');
 Route::post('/auth/doctor/signup', 'DoctorController@signup');
 Route::post('/auth/doctor/login', 'DoctorController@login');
 

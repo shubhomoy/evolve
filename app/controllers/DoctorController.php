@@ -57,11 +57,25 @@ class DoctorController extends BaseController {
 	}
 
 	public function addRemoveClinic($doctor_id, $clinic_id) {
-
+		$res = DB::select('select * from doctor_clinic where doctor_id='.$doctor_id.' and clinic_id='.$clinic_id);
+		if($res) {
+			DB::table('doctor_clinic')->where('doctor_id','=',$doctor_id)->where('clinic_id','=',$clinic_id)->delete();
+		}else{
+			DB::table('doctor_clinic')->insert(['doctor_id' => $doctor_id, 'clinic_id' => $clinic_id]);
+		}
 	}
 
 	public function showAllSpecializations() {
 		$s = Specialization::all();
 		return Response::data($s);
+	}
+
+	public function addRemoveSpecialization($doctor_id, $spec_id) {
+		$res = DB::select('select * from doctor_specialization where doctor_id='.$doctor_id.' and spec_id='.$spec_id);
+		if($res) {
+			DB::table('doctor_specialization')->where('doctor_id','=',$doctor_id)->where('spec_id','=',$spec_id)->delete();
+		}else{
+			DB::table('doctor_specialization')->insert(['doctor_id' => $doctor_id, 'spec_id' => $spec_id]);
+		}
 	}
 }
