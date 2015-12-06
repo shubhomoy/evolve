@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 class DoctorController extends BaseController {
 
 	public function show($id) {	
-		$doctor = Doctor::with('clinics', 'contacts')->find($id);
+		$doctor = Doctor::with('clinics', 'contacts', 'specializations')->find($id);
 		if($doctor) {
 			return Response::json(['msg' => 'valid', 'doctor' => $doctor]);
 		}else {

@@ -16,5 +16,9 @@ class Doctor extends Eloquent {
 	public function appointments() {
 		return $this->hasMany('Appointments', 'doctor_id');
 	}
+
+	public function specializations() {
+		return $this->belongsToMany('Specialization', 'doctor_specialization', 'doctor_id', 'spec_id');
+	}
 }
 
