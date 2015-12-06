@@ -19,10 +19,32 @@ class DoctorController extends BaseController {
 		foreach($doctors as $doctor) {
 			array_push($result, $doctor);
 		}
-		$clinics = Clinic::with('doctors.contacts')->where('name', 'like', $q.'%')->orWhere('address', 'like', $q.'%')->get();
+		$clinics = Clinic::with('doctors.contacts', 'doctors.specializations')->where('name', 'like', $q.'%')->orWhere('address', 'like', $q.'%')->get();
 		foreach($clinics as $clinic) {
 			foreach($clinic->doctors as $doctor) {
-				array_push($result, $doctor);
+				$flag = false;
+				foreach($result as $d) {
+					if($d->id == $doctor->id){
+						$flag = true;
+						break;
+					}
+				}
+				if($flag == false)
+					array_push($result, $doctor);
+			}
+		}
+		$specializations = Specialization::with('doctors.contacts', 'doctors.specializations')->where('detail', 'like', $q.'%')->get();
+		foreach($specializations as $specialization) {
+			foreach($specialization->doctors as $doctor) {
+				$flag = false;
+				foreach($result as $d) {
+					if($d->id == $doctor->id){
+						$flag = true;
+						break;
+					}
+				}
+				if($flag == false)
+					array_push($result, $doctor);
 			}
 		}
 		return Response::data($result);

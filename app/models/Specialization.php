@@ -6,5 +6,8 @@ class Specialization extends Eloquent {
 	protected $guarded = [];
 	public $timestamps = false;
 
+	public function doctors() {
+		return $this->belongsToMany('Doctor', 'doctor_specialization', 'spec_id', 'doctor_id');
+	}
 }
 
