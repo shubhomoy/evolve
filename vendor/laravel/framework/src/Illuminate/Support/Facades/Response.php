@@ -109,20 +109,4 @@ class Response {
 		return $response;
 	}
 
-	public static function data($data = '') {
-		return Response::json(['msg'=>'valid', 'data'=>$data]);
-	}
-
-	public static function outdated() {
-		return Response::json(['msg'=>'outdated']);
-	}
-
-	public static function invalid() {
-		return Response::json(['msg'=>'invalid']);
-	}
-
-	public static function unauthorized() {
-		return Response::json(['msg'=>'unauthorized']);
-	}
-
 }

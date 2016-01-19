@@ -5,9 +5,9 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
+		"php": "5.5.31",
 		"laravel/framework": "4.2.*",
-		"intervention/image": "2.*",
-		"facebook/php-sdk-v4": "4.0.*"
+		"intervention/image": "2.*"
 	},
 	"autoload": {
 		"classmap": [

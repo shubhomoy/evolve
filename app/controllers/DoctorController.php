@@ -14,7 +14,7 @@ class DoctorController extends BaseController {
 
 	public function search() {
 		$q = Input::get('q');
-		$doctors = Doctor::where('name', 'like', $q.'%')->get();
+		$doctors = Doctor::where('name', 'like', '%'.$q.'%')->get();
 		$result = [];
 		foreach($doctors as $doctor) {
 			array_push($result, $doctor);
