@@ -22,6 +22,6 @@ Route::post('/api/appointment', 'AppointmentController@makeAppointment');
 Route::post('/api/appointment/verify', 'AppointmentController@verifyAppointment');
 
 Route::get('/seealldocs', function() {
-	$doctors = Doctor::all();
+	$doctors = Doctor::first();
 	echo var_dump($doctors);
 });
