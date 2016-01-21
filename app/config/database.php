@@ -68,7 +68,7 @@ return array(
 			'host'     => 'ec2-54-83-194-117.compute-1.amazonaws.com',
 			'database' => 'dqd2lcsvh964a',
 			'username' => 'kenfpksxpuwlmx',
-			'password' => '95VBaLQWsACBN8MyDJB1mmIPpYgit',
+			'password' => '95VBaLQWsACBN8MyDJB1mmIPpY',
 			'charset'  => 'utf8',
 			'prefix'   => '',
 			'schema'   => 'public',
