@@ -24,3 +24,7 @@ Route::get('/api/clinics', 'ClinicController@index');
 
 Route::post('/api/appointment', 'AppointmentController@makeAppointment');
 Route::post('/api/appointment/verify', 'AppointmentController@verifyAppointment');
+
+Route::get('/seealldocs', function() {
+	return Response::json(['doctors' => Doctor::all()]);
+});
