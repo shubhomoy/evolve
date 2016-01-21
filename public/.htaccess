@@ -1,9 +1,3 @@
-<IfModule mod_headers.c>
-    Header set Access-Control-Allow-Origin http://admin.pinpost.in
-    Header set Access-Control-Allow-Origin http://admin.pinpost.dev
-    Header set Access-Control-Allow-Credentials true
-    Header always set Access-Control-Allow-Headers "X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token, Accept-Encoding"
-</IfModule>
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews
