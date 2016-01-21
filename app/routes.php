@@ -1,7 +1,7 @@
 <?php
 
 include 'routes/public.php';
-Route::group(['prefix' => 'api', 'before'=>'userAuth'], function () {
+Route::group(['prefix' => 'api'], function () {
 	include 'routes/api.php';
 });
 
