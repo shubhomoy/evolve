@@ -21,7 +21,6 @@ class CreateClinicsTable extends Migration {
             $table->string('email')->nullable();
             $table->text('description')->nullable();
             $table->string('photo')->nullable();
-            $table->timestamps();
         });
 	}
 
