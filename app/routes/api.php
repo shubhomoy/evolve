@@ -8,3 +8,4 @@ Route::get('/doctor/{doctor_id}/clinic/{clinic_id}', 'DoctorController@addRemove
 Route::get('/doctor/{doctor_id}/specialization/{spec_id}', 'DoctorController@addRemoveSpecialization');
 
 Route::get('/schools', 'SchoolController@all');
+Route::get('/school/{id}', 'SchoolController@show');
