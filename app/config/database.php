@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'default' => 'pgsql',
+	'default' => 'mysql',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'evolve',
 			'username'  => 'root',
-			'password'  => 'root',
+			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

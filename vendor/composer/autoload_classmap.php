@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AccessToken' => $baseDir . '/app/models/AccessToken.php',
+    'AddUserIdAppointment' => $baseDir . '/app/database/migrations/2016_02_07_080647_add_user_id_appointment.php',
     'Appointment' => $baseDir . '/app/models/Appointment.php',
     'AppointmentController' => $baseDir . '/app/controllers/AppointmentController.php',
     'BaseController' => $baseDir . '/app/controllers/BaseController.php',
@@ -1179,6 +1180,10 @@ return array(
     'Psr\\Log\\NullLogger' => $vendorDir . '/psr/log/Psr/Log/NullLogger.php',
     'Psr\\Log\\Test\\DummyTest' => $vendorDir . '/psr/log/Psr/Log/Test/LoggerInterfaceTest.php',
     'Psr\\Log\\Test\\LoggerInterfaceTest' => $vendorDir . '/psr/log/Psr/Log/Test/LoggerInterfaceTest.php',
+    'School' => $baseDir . '/app/models/School.php',
+    'SchoolAffiliation' => $baseDir . '/app/models/SchoolAffiliation.php',
+    'SchoolController' => $baseDir . '/app/controllers/SchoolController.php',
+    'SchoolType' => $baseDir . '/app/models/SchoolType.php',
     'SessionHandlerInterface' => $vendorDir . '/symfony/http-foundation/Symfony/Component/HttpFoundation/Resources/stubs/SessionHandlerInterface.php',
     'Specialization' => $baseDir . '/app/models/Specialization.php',
     'SpecializationSeeder' => $baseDir . '/app/database/seeds/SpecializationSeeder.php',
