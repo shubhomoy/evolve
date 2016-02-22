@@ -65,7 +65,7 @@ return array(
 
 		'pgsql' => array(
 			'driver'   => 'pgsql',
-			'host'     => 'ec2-54-83-194-117.compute-1.amazonaws.com',
+			'host'     => 'localhost',
 			'database' => 'evolve_production',
 			'username' => 'pguser',
 			'password' => '987654321',
