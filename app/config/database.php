@@ -66,7 +66,7 @@ return array(
 		'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',
-			'database' => 'evolve_production',
+			'database' => 'evolve_prod',
 			'username' => 'pguser',
 			'password' => '987654321',
 			'charset'  => 'utf8',
