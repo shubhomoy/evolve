@@ -16,8 +16,6 @@ class CreateDoctorSpecializationTable extends Migration {
             $table->increments('id');
             $table->integer('doctor_id')->unsigned();
             $table->integer('spec_id')->unsigned();
-            $table->foreign('doctor_id')->references('id')->on('doctors');
-            $table->foreign('spec_id')->references('id')->on('specializations');
         });
 	}
 

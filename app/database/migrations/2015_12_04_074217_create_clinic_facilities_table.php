@@ -16,7 +16,6 @@ class CreateClinicFacilitiesTable extends Migration {
             $table->increments('id');
             $table->integer('clinic_id')->unsigned();
             $table->string('facility');
-            $table->foreign('clinic_id')->references('id')->on('clinics');
         });
 	}
 

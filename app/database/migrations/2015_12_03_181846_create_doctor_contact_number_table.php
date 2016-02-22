@@ -16,7 +16,6 @@ class CreateDoctorContactNumberTable extends Migration {
             $table->increments('id');
             $table->integer('doctor_id')->unsigned();
             $table->string('contact_no');
-            $table->foreign('doctor_id')->references('id')->on('doctors');
         });
 	}
 

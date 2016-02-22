@@ -23,8 +23,6 @@ class CreateAppointmentsTable extends Migration {
             $table->text('description')->nullable();
             $table->string('otp', 5)->nullable();
             $table->integer('verified')->default(0);
-            $table->foreign('doctor_id')->references('id')->on('doctors');
-            $table->foreign('clinic_id')->references('id')->on('clinics');
         });
 	}
 
