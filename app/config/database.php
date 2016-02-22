@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'default' => 'mysql',
+	'default' => 'pgsql',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -66,9 +66,9 @@ return array(
 		'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'ec2-54-83-194-117.compute-1.amazonaws.com',
-			'database' => 'dqd2lcsvh964a',
-			'username' => 'kenfpksxpuwlmx',
-			'password' => '95VBaLQWsACBN8MyDJB1mmIPpY',
+			'database' => 'evolve_production',
+			'username' => 'pguser',
+			'password' => '987654321',
 			'charset'  => 'utf8',
 			'prefix'   => '',
 			'schema'   => 'public',
